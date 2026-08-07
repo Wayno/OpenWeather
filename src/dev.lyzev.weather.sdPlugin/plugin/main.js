@@ -66,7 +66,7 @@ function setButton(response, context, city, temperature) {
     else if (code <= 86) icon = "snow-showers";
     else if (code <= 99) icon = isDay ? "thunderstorms-day" : "thunderstorms-night";
 
-    const defaultImg = "https://raw.githubusercontent.com/Lyzev/streamDeck-weatherPlugin/master/Sources/dev.lyzev.sdPlugin/resources/actionIcon.png";
+    const defaultImg = "https://raw.githubusercontent.com/Lyzev/OpenWeather/master/Sources/dev.lyzev.sdPlugin/resources/actionIcon.png";
     const url = icon ? `https://raw.githubusercontent.com/basmilius/meteocons/v2/production/fill/png/128/${icon}.png` : defaultImg;
 
     dataFromCanvasDraw(url, city, temperature, (dataUrl) => sendWs({event: "setImage", context, payload: {image: dataUrl}}));
