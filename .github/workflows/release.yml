@@ -33,4 +33,4 @@ jobs:
           gh release create "v${{ env.VERSION }}" \
             --title "Release v${{ env.VERSION }}" \
             --generate-notes \
-            ../dev.lyzev.weather
+            dev.lyzev.weather
