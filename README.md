@@ -1,50 +1,35 @@
-
 # Weather
 
-[![badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/JaouherK/a489177df4f24946281bdc1b21524b13/raw/79aacf61a7e32fe2e597f3f1980df1029d54894a/weatherMetaData.json)](https://github.com/JaouherK/streamDeck-weatherPlugin/releases/tag/v2.1.2)
+`Weather` is a Stream Deck plugin that shows current weather using an icon, city name, and temperature directly on the key.
 
-`Weather` is a plugin that displays the weather condition as a picture image, the city name and the temperature of a given location. It is connected to multiple providers and needs an API Key to connect.
+As of `v3.0.0`, the plugin uses **Open-Meteo** APIs (geocoding + forecast). No API key is required.
 
-Possible providers:
+## Button settings
 
-- WeatherAPI
-- OpenWeather
+Do not set a custom key title or image. The plugin renders both dynamically.
 
-Optionally, you can choose the frequency of fetching updated data and the temperature unit ( Celsius or Fahrenheit).
+- **Location name or postal code**: location query (for example `Paris, France` or `90210`)
+- **Temperature**: `Celsius (°C)` or `Fahrenheit (°F)`
+- **Fetch frequency**: `On push`, `10 Minutes`, `30 Minutes`, or `1 Hour`
+- **Round to closest degree**: `Yes` or `No`
+- **Report bug**: opens the GitHub issue form
 
-# Button settings
+## Features
 
-The button is configured as follows:
-
-- Title: Please do not set any value in order to display the temperature correctly
-- Image: Please do not update picture in order to display the weather icon correctly
-- Provider: the weather information provider: WeatherAPI or OpenWeather
-- API key: your provider account key available in your account information on the associated provider website
-- City Name: the city for which the information will be displayed on the button
-- Temperature: the temperature unit ( Celsius or Fahrenheit)
-- Fetch frequency: how often the data is updated (beware for free accounts the limits set by the provider)
-- Display city name: Provides the possibility choose where to display the city name (also if we need to hide it)
-- Round to nearest degree: Provides the possibility to show / hide digits after decimal point
-- "Get my API key" button: to retrieve the key for your account
-- "Report bug" button: to report a bug
-
-# Features
-
-- code written in Javascript
-- cross-platform (macOS, Windows)
-- Choice of Weather provider
-- Choose temperature unit
-- choose fetching frequency of the weather data
-- Weather condition icon fit to display
+- JavaScript implementation
+- Works on Linux, macOS and Windows
+- Open-Meteo integration (no API key setup)
+- Automatic weather icon selection by weather code and day/night
+- Optional periodic refresh
 
 ![screen](screenshot.png)
 
-# Installation
+## Installation
 
-In the Release folder, you can find the file `com.jk.weather.streamDeckPlugin`. If you double-click this file on your machine, Stream Deck will install the plugin.
+Download `dev.lyzev.weather.streamDeckPlugin` from the project releases, then install it in OpenDeck.
 
-# Source code
+## Source code
 
-The `Sources` folder contains the source code of the plugin.
+Plugin sources are in `src/dev.lyzev.weather.sdPlugin`.
 
 Application main icon made by [Smashicons](https://www.flaticon.com/authors/smashicons) from [www.flaticon.com](https://www.flaticon.com/)

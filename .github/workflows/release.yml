@@ -1,0 +1,36 @@
+name: Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Extract version from manifest.json
+        id: get_version
+        run: |
+          VERSION=$(jq -r '.Version' src/dev.lyzev.weather.sdPlugin/manifest.json)
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "Found version: $VERSION"
+
+      - name: Zip contents of src/
+        run: |
+          cd src
+          shopt -s dotglob
+          zip -r ../dev.lyzev.weather *
+
+      - name: Create GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "v${{ env.VERSION }}" \
+            --title "Release v${{ env.VERSION }}" \
+            --generate-notes \
+            ../dev.lyzev.weather

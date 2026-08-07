@@ -11,19 +11,19 @@
         }
       ],
       "SupportedInMultiActions": true,
-      "Tooltip": "Get current weather condition and temperature of a given city",
-      "UUID": "com.jk.weather.action"
+      "Tooltip": "Get current weather condition and temperature of a given location",
+      "UUID": "dev.lyzev.weather.action"
     }
   ],
   "SDKVersion": 2,
-  "Author": "Jaouher Kharrat",
+  "Author": "Lyzev",
   "CodePath": "plugin/main.html",
-  "Description": "Get current weather condition and temperature of a given city",
+  "Description": "Get current weather condition and temperature of a given location",
   "Name": "Weather",
   "Icon": "resources/pluginIcon",
   "PropertyInspectorPath": "pi/main_pi.html",
   "URL": "https://github.com/JaouherK",
-  "Version": "2.1.2",
+  "Version": "3.0.0",
   "OS": [
     {
       "Platform": "mac",

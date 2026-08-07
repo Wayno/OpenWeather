@@ -1,0 +1,43 @@
+<!doctypehtml>
+<meta charset="utf-8"><title>dev.lyzev.weather.pi</title>
+<link href="sdpi.css" rel="stylesheet">
+<script src="main_pi.js"></script>
+<body onload="updateSettings()">
+<div class="hidden sdpi-wrapper">
+    <div class="sdpi-item">
+        <summary>Please do not set a title or an image for this plugin as they are being generated on the fly!</summary>
+    </div>
+    <div class="sdpi-heading">API SETUP</div>
+    <div class="sdpi-item">
+        <div class="sdpi-item-label">Location name or postal code</div>
+        <input class="sdpi-item-value" id="cityName" onchange="updateSettings()" placeholder="e.g., Paris, France"
+               required
+               title="The parameter accepts a location optionally followed by a comma and a country or first-level administrative area, in the form <location>[, <country or admin1>]. For example, Paris, France, Los Angeles, California or Los Angeles, CA.">
+    </div>
+    <div class="sdpi-item">
+        <div class="sdpi-item-label">Temperature</div>
+        <select class="sdpi-item-value select" id="unit" onchange="updateSettings()">
+            <option value="celsius">Celsius °C
+            <option value="fahrenheit">Fahrenheit °F
+        </select></div>
+    <div class="sdpi-item">
+        <div class="sdpi-item-label">Fetch frequency</div>
+        <select class="sdpi-item-value select" id="frequency" onchange="updateSettings()">
+            <option value="0">On push
+            <option value="600000">10 Minutes
+            <option value="1800000">30 Minutes
+            <option value="3600000">1 Hour
+        </select></div>
+    <div class="sdpi-item">
+        <div class="sdpi-item-label">Round to closest degree</div>
+        <select class="sdpi-item-value select" id="roundDegree" onchange="updateSettings()">
+            <option value="true">Yes
+            <option value="false">No
+        </select></div>
+    <div class="sdpi-item">
+        <button class="sdpi-item-value"
+                onclick='openPage("github.com/JaouherK/streamDeck-weatherPlugin/issues/new?assignees=JaouherK&labels=bug&template=bug_report.md&title=Bug+report")'>
+            Report bug
+        </button>
+    </div>
+</div>
