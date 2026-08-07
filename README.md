@@ -26,7 +26,7 @@ Do not set a custom key title or image. The plugin renders both dynamically.
 
 ## Installation
 
-Download `dev.lyzev.weather.streamDeckPlugin` from the project releases, then install it in OpenDeck.
+Download `dev.lyzev.weather` from the project releases, then install it in OpenDeck.
 
 ## Source code
 
