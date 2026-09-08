@@ -2,7 +2,7 @@
 
 `Weather` is a Stream Deck plugin that shows current weather using an icon, city name, and temperature directly on the key.
 
-As of `v3.0.0`, the plugin uses **Open-Meteo** APIs (geocoding + forecast). No API key is required.
+As of `v3.0.1`, the plugin uses **Open-Meteo** APIs (geocoding + forecast). No API key is required.
 
 ## Button settings
 
